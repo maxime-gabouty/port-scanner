@@ -15,14 +15,14 @@ des services courants (SSH, HTTP, MySQL, etc.).
 Aucune dépendance externe — seulement la bibliothèque standard Python 3.
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/maxime-gabouty/port-scanner.git
 cd port-scanner
 ```
 
 ## Usage
 
 ```bash
-python3 port_scanner.py <cible> [--start 1] [--end 1024] [--threads 100] [--timeout 0.5]
+python3 port_scanner.py IP_OU_NOM_HOTE [--start 1] [--end 1024] [--threads 100] [--timeout 0.5]
 ```
 
 ### Exemples
@@ -79,9 +79,9 @@ selon la juridiction (en France : article 323-1 du Code pénal).
 
 ## Pistes d'amélioration
 - Ajout d'un mode UDP
-- Export des résultats en JSON/CSV
-- Bannière grabbing (récupération de la version du service)
-- Scan en parallèle sur plusieurs cibles (fichier de liste d'IP)
+- Scan de plusieurs cibles à la fois (à partir d'un fichier de liste d'IP)
+- Barre de progression pendant le scan
+- Détection d'OS basique via TTL/fingerprinting
 
 ## Licence
 MIT
